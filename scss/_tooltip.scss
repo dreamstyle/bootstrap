@@ -94,19 +94,20 @@
 
 /* rtl:end:ignore */
 
-.bs-tooltip-auto {
-  &[data-popper-placement^="top"] {
-    @extend .bs-tooltip-top;
-  }
-  &[data-popper-placement^="right"] {
-    @extend .bs-tooltip-end;
-  }
-  &[data-popper-placement^="bottom"] {
-    @extend .bs-tooltip-bottom;
-  }
-  &[data-popper-placement^="left"] {
-    @extend .bs-tooltip-start;
-  }
+.tooltip[data-popper-placement^="top"] {
+  @extend .bs-tooltip-top;
+}
+
+.tooltip[data-popper-placement^="right"] {
+  @extend .bs-tooltip-end;
+}
+
+.tooltip[data-popper-placement^="bottom"] {
+  @extend .bs-tooltip-bottom;
+}
+
+.tooltip[data-popper-placement^="left"] {
+  @extend .bs-tooltip-start;
 }
 
 // Wrapper for the tooltip content

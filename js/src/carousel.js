@@ -77,7 +77,7 @@ const Default = {
 }
 
 const DefaultType = {
-  interval: '(number|boolean)', // TODO:v6 remove boolean support
+  interval: 'number',
   keyboard: 'boolean',
   pause: '(string|boolean)',
   ride: '(boolean|string)',

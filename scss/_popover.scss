@@ -160,19 +160,20 @@
 
 /* rtl:end:ignore */
 
-.bs-popover-auto {
-  &[data-popper-placement^="top"] {
-    @extend .bs-popover-top;
-  }
-  &[data-popper-placement^="right"] {
-    @extend .bs-popover-end;
-  }
-  &[data-popper-placement^="bottom"] {
-    @extend .bs-popover-bottom;
-  }
-  &[data-popper-placement^="left"] {
-    @extend .bs-popover-start;
-  }
+.popover[data-popper-placement^="top"] {
+  @extend .bs-popover-top;
+}
+
+.popover[data-popper-placement^="right"] {
+  @extend .bs-popover-end;
+}
+
+.popover[data-popper-placement^="bottom"] {
+  @extend .bs-popover-bottom;
+}
+
+.popover[data-popper-placement^="left"] {
+  @extend .bs-popover-start;
 }
 
 // Offset the popover to account for the popover arrow
