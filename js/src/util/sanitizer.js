@@ -93,7 +93,7 @@ export function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
 
   const domParser = new window.DOMParser()
   const createdDocument = domParser.parseFromString(unsafeHtml, 'text/html')
-  const elements = [].concat(...createdDocument.body.querySelectorAll('*'))
+  const elements = [...createdDocument.body.querySelectorAll('*')]
 
   for (const element of elements) {
     const elementName = element.nodeName.toLowerCase()
@@ -104,7 +104,7 @@ export function sanitizeHtml(unsafeHtml, allowList, sanitizeFunction) {
       continue
     }
 
-    const attributeList = [].concat(...element.attributes)
+    const attributeList = [...element.attributes]
     const allowedAttributes = [].concat(allowList['*'] || [], allowList[elementName] || [])
 
     for (const attribute of attributeList) {
